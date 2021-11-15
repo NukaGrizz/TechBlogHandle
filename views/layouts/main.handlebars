@@ -6,30 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Tech News</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>TechBlog</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+    <header class="header-container">
+      <nav class="header-container-nav">
+          <a class="header-container-nav-cta" href="/">Home</a>
+          <a class="header-container-nav-cta" href="/post/dashboard">Dashboard</a>
+          {{#if loggedIn}}
+              <a class="header-container-nav-cta" href="/logout">Logout</a>
+          {{else}}
+              <a class="header-container-nav-cta" href="/login">Login</a>
+          {{/if}}
       </nav>
+    `<h1 class="header-container-heading-display"> {{#if loggedIn}}{{headingDisplay}}{{else}}The Tech Blog {{/if}}</h1>
     </header>
-    <main>
-      {{{ body }}}
+    <main class="main-container">
+        {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      Made by Joe Tremols
     </footer>
-  </div>
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
