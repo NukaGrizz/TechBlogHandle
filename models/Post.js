@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
+
 // create our Post model
 class Post extends Model {
   static upvote(body, models) {
@@ -46,9 +48,12 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    content: {
+      type: DataTypes.TEXT
+    },
     post_url: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isURL: true
       }
