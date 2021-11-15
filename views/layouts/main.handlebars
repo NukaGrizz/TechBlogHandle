@@ -4,27 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Handle a Tech Blog</title>
+  <title>Just Tech News</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>TechBlog</title>
 </head>
 
 <body>
   <header class="header-container">
     <nav class="header-container-nav">
         <a class="header-container-nav-cta" href="/">Home</a>
-        <a class="header-container-nav-cta" href="/post/dashboard">Dashboard</a>
+        <a class="header-container-nav-cta" href="/dashboard">Dashboard</a>
         {{#if loggedIn}}
-            <a class="header-container-nav-cta" href="/logout">Logout</a>
+            <a class="header-container-nav-cta" id="logout">Logout</a>
         {{else}}
             <a class="header-container-nav-cta" href="/login">Login</a>
         {{/if}}
     </nav>
-    <h1 class="header-container-heading-display"> {{#if loggedIn}}{{headingDisplay}}{{else}}The Tech Blog {{/if}}</h1>
-</header>
-
-<main class="main-container">
-    {{{ body }}}
-</main>
+    <h1 class="header-container-heading-display">The Tech Blog</h1>
+  </header>
+    <main class="main-container">
+      {{{ body }}}
+    </main>
+    <footer>
+      Made by Joe Tremols
+    </footer>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

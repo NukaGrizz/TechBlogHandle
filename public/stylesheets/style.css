@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
 }
 
 body, html {
@@ -176,3 +181,99 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+.main-container {
+  background: #dce9d5;
+  padding: 40px 50px;
+  min-height: 1000px;
+}
+
+.add-post-container {
+  display: flex;
+  min-height: 50px;
+  justify-content: center;
+}
+.add-post-container-btn {
+  padding: 15px 30px;
+  color: #dce9d5;
+  background: black;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.header-container {
+  background: #201110;
+  padding: 0 50px 30px;
+}
+.header-container-nav {
+  width: 100%;
+}
+.header-container-nav-cta {
+  color: #dce9d5;
+  font-size: 25px;
+  line-height: 25px;
+  display: inline-block;
+  margin: 40px 20px 40px 0;
+}
+.header-container-heading-display {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: #201110;
+  background: #dce9d5;
+  box-shadow: 8px 8px 0 darkgrey;
+  display: inline-block;
+}
+
+.card {
+  border-style: solid;
+  border-color: #201110;
+  background: #dce9d5;
+  margin-bottom: 30px;
+}
+.card--comment {
+  margin-left: 60px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #201110;
+  font-size: 25px;
+  padding: 15px;
+  min-height: 60px;
+}
+.card-header-title, .card-header-date {
+  color: #dce9d5;
+}
+.card-header-title {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.card-header-date {
+  font-size: 15px;
+}
+.card-body {
+  padding: 30px 15px;
+}
+.card-body--post {
+  font-size: 25px;
+}
+
+.form {
+  padding: 15px;
+  display: grid;
+}
+.form-field {
+  margin: 5px 0 30px;
+}
+.form-field-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+
+
